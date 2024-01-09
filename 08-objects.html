@@ -7,35 +7,46 @@
 </head>
     <body>
         <script>
-            const product={
-                name: 'socks',
-                price:100,
+            // const product={
+            //     name: 'socks',
+            //     price:100,
                 
+            // };
+            // const product2={
+            //     name: 'shirt',
+            //     'delivery-time':'1 day',
+            //     rating:{
+            //         stars:4.5,
+            //         count:87
+            //     },
+            //     price:100,
+            //     fun: function function1(){
+            //         console.log('function inside object !');
+            //     }
+            // };
+            // console.log(product);
+            // product.newProperty=true;
+            // delete product.name;
+            // console.log(product);
+            // console.log(product2.rating);
+            // console.log(product2.fun());
+            // //JSON -similar to JS object ,but with less features
+            // console.log(typeof JSON.stringify(product2));//converts js object to json 
+            // const jsonString=JSON.stringify(product2);
+            // console.log(JSON.parse(jsonString));//converts json to js objects
+            console.log('hello'.length);
+            console.log('hello'.toLocaleUpperCase());
+            const object1={
+                message:'1234',
+                price:898
             };
-            const product2={
-                name: 'shirt',
-                'delivery-time':'1 day',
-                rating:{
-                    stars:4.5,
-                    count:87
-                },
-                price:100,
-                fun: function function1(){
-                    console.log('function inside object !');
-                }
+            const{ message,price}=object1;
+            console.log(message);
+            console.log(price);
+            const object2={
+                message:message
             };
-            console.log(product);
-            product.newProperty=true;
-            delete product.name;
-            console.log(product);
-            console.log(product2.rating);
-            console.log(product2.fun());
-            //JSON -similar to JS object ,but with less features
-            console.log(typeof JSON.stringify(product2));//converts js object to json 
-            const jsonString=JSON.stringify(product2);
-            console.log(JSON.parse(jsonString));//converts json to js objects
-            
-
+            console.log(object2);
         </script>
     </body>
 </html> 
