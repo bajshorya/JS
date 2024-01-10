@@ -7,13 +7,18 @@
 </head>
     <body>
         <p>Todo List</p>
-        <input placeholder="Todo name" class="js-name-input">
-        <button onclick="
-        addTodo();
-        ">Add</button>
+        <div class="todo-input-grid">
+            <input placeholder="Todo name" class="js-name-input">
+
+            <input type="date"
+                class="js-due-date-input">
+                
+            <button onclick="
+                addTodo();
+            ">Add</button>
 
         <div class="js-todo-list"></div>
-        
+
         <script src="scripts/11-todo-list.js"></script>
     </body>
 </html>
