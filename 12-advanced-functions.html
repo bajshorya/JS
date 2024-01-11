@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Advanced Functions</title>
 </head>
     <body>
         <script>
@@ -19,16 +19,24 @@
             // //function saved inside object 
             // //if we call objects1.fun() it will call the function inside it 
             // object1.fun();
-            setTimeout(function(){
-                console.log('timeout')
-            },3000);
-            console.log('next line');
+            // setTimeout(function(){
+            //     console.log('timeout')
+            // },3000);
+            // console.log('next line');
 
-            // setInterval(function(){
-            //     console.log('interval');
-            // }, 3000);
-            console.log('next line 2');
+            // // setInterval(function(){
+            // //     console.log('interval');
+            // // }, 3000);
+            // console.log('next line 2');
 
+            [
+                'make dishes',
+                'wash dishes',
+                'watch youtube'
+            ].forEach(function(value,index){
+                console.log(index);
+                console.log(value);
+            });
         </script>
     </body>         
 </html>
