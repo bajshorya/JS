@@ -18,16 +18,9 @@
     <p class="js-result result">You Win.</p>
     <p class="js-moves"></p>
     <p class="js-score score"></p>
-    <button onclick="
-        Score.Wins=0;
-        Score.Losses=0;
-        Score.Ties=0;
-        localStorage.removeItem('Score');
-        updateScoreElement();
-    " class="reset-score-button">Reset Score</button> 
-    <button class="auto-play-button" onclick="
-        autoplay();
-    ">Auto Play</button>
+    
+    <button class="reset-score-button js-reset-score-button">Reset Score</button> 
+    <button class="auto-play-button js-auto-play-button">Auto Play</button>
     <script src="scripts/12-rock-paper-scissors.js"></script>
 </body>
 </html>

@@ -41,6 +41,19 @@ document.querySelector('.js-scissors-button').addEventListener('click',()=>{
     playGame('scissors')
 });
 
+// Add event listener for Reset Score button
+
+document.querySelector('.js-reset-score-button').addEventListener('click', () => {
+    Score.Wins = 0;
+    Score.Losses = 0;
+    Score.Ties = 0;
+    localStorage.removeItem('Score');
+    updateScoreElement();
+});
+
+
+// Add event listener for Auto Play button
+document.querySelector('.js-auto-play-button').addEventListener('click', autoplay);
 
 function playGame(playerMove){
 const computerMove=pickComputerMove();
