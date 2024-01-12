@@ -6,37 +6,75 @@
     <title>Advanced Functions</title>
 </head>
     <body>
+        <button onclick="" class="js-button">Click</button>
+
         <script>
-            // function greeting(){
-            //     console.log('hello');
-            // }
-            // const object1={
-            //     num:2,
-            //     fun:function greeting(){
-            //         console.log('hello2');
-            //     }
-            // }
-            // //function saved inside object 
-            // //if we call objects1.fun() it will call the function inside it 
-            // object1.fun();
-            // setTimeout(function(){
-            //     console.log('timeout')
-            // },3000);
-            // console.log('next line');
+            const buttonElement=document.querySelector('.js-button');
+            const eventLinstener=()=>{
+                console.log('click');
+            };
 
-            // // setInterval(function(){
-            // //     console.log('interval');
-            // // }, 3000);
-            // console.log('next line 2');
-
-            [
-                'make dishes',
-                'wash dishes',
-                'watch youtube'
-            ].forEach(function(value,index){
-                console.log(index);
-                console.log(value);
+            buttonElement.addEventListener('click',eventLinstener);
+            buttonElement.removeEventListener('click',eventLinstener);
+            buttonElement.addEventListener('click',() => {
+                console.log('click2');
             });
+
+            //it is a better practice to use eventListner () rather than the on click atribute on button
+
+
+
+            // // function greeting(){
+            // //     console.log('hello');
+            // // }
+            // // const object1={
+            // //     num:2,
+            // //     fun:function greeting(){
+            // //         console.log('hello2');
+            // //     }
+            // // }
+            // // //function saved inside object 
+            // // //if we call objects1.fun() it will call the function inside it 
+            // // object1.fun();
+            // // setTimeout(function(){
+            // //     console.log('timeout')
+            // // },3000);
+            // // console.log('next line');
+
+            // // // setInterval(function(){
+            // // //     console.log('interval');
+            // // // }, 3000);
+            // // console.log('next line 2');
+
+            // [
+            //     'make dishes',
+            //     'wash dishes',
+            //     'watch youtube'
+            // ].forEach(function(value,index){
+            //     console.log(index);
+            //     console.log(value);
+            // });
+            // const arrowFunctions=(param)=>{
+            //     console.log(param)
+            // };//arrowfunctions similar to normal functions
+            // arrowFunctions('5');
+
+            // const oneParam=param=>{
+            //     console.log(param+2);
+            // };
+            // oneParam(2);
+            // const oneLine=()=>2+3;//when there is only one lined returnstatement curly braces can be removed and also return statement ,and the code can be wriiten on the same line 
+            // console.log(oneLine())
+
+            // //if we are making a function inside another function it's recommended to use arrow functions 
+            // const object2={
+            //     method:()=>{
+
+            //     },
+            //     method(){
+
+            //     }
+            // };
         </script>
     </body>         
 </html>
