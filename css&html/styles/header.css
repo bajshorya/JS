@@ -7,15 +7,49 @@
 }
 
 .left-section{
-    background-color: lightblue;
-    width: 150px;
+    
+    display: flex;
+    align-items: center;
+}
+.hamburger-menu{
+    height: 24px;
+    margin-left: 24px;
+    margin-right: 20px;
+}
+.youtube-logo{
+    height: 20px;
 }
 .middle-section{
-    background-color: lightpink;
+   
     flex: 1;
     margin-right: 35px;
     margin-left: 70px;
     max-width: 500px;
+    display: flex;
+    align-items: center;
+}
+.search-bar{
+    flex: 1;
+    height: 34px;
+    padding-left: 10px;
+    font-size: 16px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(192, 192, 192);
+    border-radius: 2px;
+    box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.05);
+}
+.search-bar::placeholder{
+    font-family: Roboto,Arial;
+    font-size: 16px;
+}
+.search-button{
+    height: 40px;
+    width: 60px;
+}
+.voice-search-button{
+    height: 40px;
+    width: 60px;
 }
 .right-section{
     background-color: lightblue;
