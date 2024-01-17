@@ -59,7 +59,9 @@ document.querySelector('.js-products-grid').innerHTML=productsHTMl;
 document.querySelectorAll('.js-add-to-cart').forEach((button)=>{
     button.addEventListener('click',()=>{
        const productId= button.dataset.productId;
+       
         let matchingItem;
+
         cart.forEach((item)=>{
             if(productId===item.productId){
                 matchingItem=item;
@@ -75,11 +77,16 @@ document.querySelectorAll('.js-add-to-cart').forEach((button)=>{
             });
         }
 
-       cart.push({
-        productName:productName,
-        quantity:1
+      
+       let cartQuantity=0;
+       cart.forEach((item)=>{
+            cartQuantity+=item.quantity;
        });
-       console.log(cart);
+
+   
+
+       document.querySelector('.js-cart-quantity').innerHTML=cartQuantity;
+
     });
 });
 //data attribute allows us to attach any info to an element ,has to start with "data-",then any name can be given 
