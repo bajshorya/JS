@@ -1,4 +1,5 @@
 import { cart } from "../data/cart.js";
+import { products } from "../data/products.js";
 //imported cart variable from cart.js
 //a module import should always be written on top of the file 
 // to avoid naming conflicts write as _____ after the
