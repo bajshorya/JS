@@ -1,3 +1,11 @@
+import { cart } from "../data/cart.js";
+//imported cart variable from cart.js
+//a module import should always be written on top of the file 
+// to avoid naming conflicts write as _____ after the
+// name of the module ,this will allow you to use the
+// same word in the file again 
+
+
 let productsHTMl='';
 
 products.forEach((product)=>{
@@ -68,14 +76,15 @@ document.querySelectorAll('.js-add-to-cart').forEach((button)=>{
             }
         });
 
-        if(matchingItem){
-            matchingItem.quantity+=1;
-        }else{
+        if (matchingItem) {
+            matchingItem.quantity += 1;
+        } else {
             cart.push({
-                productId:productId,
-                quantity:1
+                productId: productId,
+                quantity: 1
             });
         }
+        
 
       
        let cartQuantity=0;
