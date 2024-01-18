@@ -3,9 +3,9 @@ import { cart } from "../data/cart.js";
 //a module import should always be written on top of the file 
 // to avoid naming conflicts write as _____ after the
 // name of the module ,this will allow you to use the
-// same word in the file again 
-
-
+// same word in the file again  cart as myCart
+// const cart=[]; then we can use thia
+ 
 let productsHTMl='';
 
 products.forEach((product)=>{
