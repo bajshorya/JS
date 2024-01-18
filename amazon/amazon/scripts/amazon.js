@@ -1,4 +1,4 @@
-import { cart } from "../data/cart.js";
+import { cart,addToCart } from "../data/cart.js";
 import { products } from "../data/products.js";
 //imported cart variable from cart.js
 //a module import should always be written on top of the file 
@@ -65,38 +65,26 @@ products.forEach((product)=>{
 
 document.querySelector('.js-products-grid').innerHTML=productsHTMl;
 
+function updateCartQuantity( ){
+      
+    let cartQuantity=0;
+    cart.forEach((cartItem)=>{
+         cartQuantity+=cartItem.quantity;
+    });
+
+
+    document.querySelector('.js-cart-quantity').innerHTML=cartQuantity;
+
+}
+
 document.querySelectorAll('.js-add-to-cart').forEach((button)=>{
     button.addEventListener('click',()=>{
        const productId= button.dataset.productId;
        
-        let matchingItem;
-
-        cart.forEach((item)=>{
-            if(productId===item.productId){
-                matchingItem=item;
-            }
-        });
-
-        if (matchingItem) {
-            matchingItem.quantity += 1;
-        } else {
-            cart.push({
-                productId: productId,
-                quantity: 1
-            });
-        }
         
-
-      
-       let cartQuantity=0;
-       cart.forEach((item)=>{
-            cartQuantity+=item.quantity;
-       });
-
-   
-
-       document.querySelector('.js-cart-quantity').innerHTML=cartQuantity;
-
+       addToCart(productId);
+       updateCartQuantity();
+    
     });
 });
 //data attribute allows us to attach any info to an element ,has to start with "data-",then any name can be given 
