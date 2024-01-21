@@ -10,12 +10,11 @@ export function renderPaymentSummary(){
     cart.forEach((cartItem) => {
         const product = getProduct(cartItem.productId);
         productPriceCents += product.priceCents * cartItem.quantity;
-
-        const deliveryOption=getDeliveryOption(cartItem.deliveryOptionId);
-        shippingPriceCents+=deliveryOption.priceCents;
-
-    });
-
+    
+        const deliveryOption = getDeliveryOption(cartItem.deliveryOptionId);
+        shippingPriceCents += deliveryOption.priceCents;
+      });
+    
     const totalBeforeTaxCents=productPriceCents+shippingPriceCents;
     const taxCents=totalBeforeTaxCents*0.1;
     const totalCents=totalBeforeTaxCents+taxCents;
@@ -27,14 +26,15 @@ export function renderPaymentSummary(){
 
         <div class="payment-summary-row">
             <div>Items (3):</div>
-            <div class="payment-summary-money">$${formatCurrency(productPriceCents)}
+            <div class="payment-summary-money">
+                $${formatCurrency(productPriceCents)}
             </div>
         </div>
 
         <div class="payment-summary-row">
             <div>Shipping &amp; handling:</div>
-            <div class="payment-summary-money">$
-            ${formatCurrency(shippingPriceCents)}
+            <div class="payment-summary-money">
+            $${formatCurrency(shippingPriceCents)}
             </div>
         </div>
 
@@ -47,15 +47,15 @@ export function renderPaymentSummary(){
 
         <div class="payment-summary-row">
             <div>Estimated tax (10%):</div>
-            <div class="payment-summary-money">$
-            ${formatCurrency(taxCents)}
+            <div class="payment-summary-money">
+                $${formatCurrency(taxCents)}
             </div>
         </div>
 
         <div class="payment-summary-row total-row">
             <div>Order total:</div>
-            <div class="payment-summary-money">$
-            ${formatCurrency(totalCents)}
+            <div class="payment-summary-money">
+                $${formatCurrency(totalCents)}
             </div>
         </div>
 
