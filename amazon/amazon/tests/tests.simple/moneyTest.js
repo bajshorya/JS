@@ -1,4 +1,4 @@
-import {formatCurrency} from '../scripts/utils/money.js';
+import {formatCurrency} from '../../scripts/utils/money.js';
 //generally we build two types of test cases 
 // 1.basic(simple test with easy answers) 2.edge (tricky cases)
 if(formatCurrency(2095)==='20.95'){
