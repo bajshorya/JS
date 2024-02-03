@@ -103,3 +103,33 @@
 //     await api();
 //     await api();
 // }
+
+// ----------------------------------------------
+//                  dom
+
+// event delegation 
+// document.querySelector('#golf').addEventListener('click',function(e) {
+//     const target =e.target;
+
+//     if(target.matches('li')){
+//         target.styke.backgroundColor='lightgrey'
+// //     }
+// // })
+
+
+
+// in place of this we can use this 
+
+
+
+
+// document.querySelector('sports').addEventListener('click',function(e){
+//     console.log(e.target.getAttribute('id')+"is clicked");
+
+    // const target = e.target;
+    // if(target.matches('li')){
+    //     target.style.backgroundColor='lightgret';
+    // }
+// })
+
+ 
