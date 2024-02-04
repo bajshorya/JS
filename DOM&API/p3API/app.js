@@ -35,3 +35,6 @@ btn.addEventListener('click',getFacts);
 //Response (json)---> JS object
 
 //json() method-return another promise 
+
+
+//https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
